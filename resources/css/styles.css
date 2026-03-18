@@ -1,0 +1,67 @@
+#animated-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../art/background.jpg");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  animation: animated-background 500s linear infinite;
+  z-index: -100;
+}
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  font-family: "Courier New", monospace;
+}
+
+.logo {
+  display: block;
+  grid-column: 2;
+  justify-self: center;
+  width: clamp(100px, 20vw, 200px);
+  height: auto;
+}
+
+.self-title {
+  background-color: rgb(39, 39, 39);
+  color: greenyellow;
+  grid-column: 3;
+  justify-self: center;
+  align-self: center;
+  margin: 5%;
+  padding: 0% 5%;
+  width: 80%;
+  border-radius: 5px;
+  font-size: clamp(0.1rem, 1vw, 6rem);
+}
+
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@keyframes animated-background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -8400px 5100px;
+  }
+}
